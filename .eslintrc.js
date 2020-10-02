@@ -3,7 +3,12 @@ module.exports = {
   env: {
     'react-native/react-native': true,
   },
-  extends: ['@react-native-community', 'plugin:prettier/recommended'],
+  extends: ['@react-native-community', 'airbnb', 'plugin:prettier/recommended'],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+    'global.HermesInternal': 'readonly',
+  },
   plugins: ['react', 'react-native', 'prettier'],
   parserOptions: {
     ecmaFeatures: {
@@ -20,5 +25,11 @@ module.exports = {
     'react-native/no-raw-text': 2,
     'react-native/no-single-element-style-arrays': 2,
     'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [
+      2,
+      {extensions: ['.js', '.jsx', '.ts', '.tsx']},
+    ],
+    'no-use-before-define': ['off'],
+    'react/jsx-closing-bracket-location': [1, 'after-props'],
   },
 };

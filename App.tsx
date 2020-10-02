@@ -24,6 +24,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+const globalHermes: any = global;
+
 const App: () => React.ReactNode = () => {
   return (
     <>
@@ -33,7 +35,7 @@ const App: () => React.ReactNode = () => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <Header />
-          {global.HermesInternal == null ? null : (
+          {globalHermes.HermesInternal == null ? null : (
             <View style={styles.engine}>
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
@@ -42,8 +44,9 @@ const App: () => React.ReactNode = () => {
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
+                Edit
+                <Text style={styles.highlight}>App.js</Text>
+                to change this screen and then come back to see your edits.
               </Text>
             </View>
             <View style={styles.sectionContainer}>
