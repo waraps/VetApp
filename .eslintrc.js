@@ -31,5 +31,22 @@ module.exports = {
     ],
     'no-use-before-define': ['off'],
     'react/jsx-closing-bracket-location': [1, 'after-props'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
