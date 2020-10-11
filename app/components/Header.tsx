@@ -1,9 +1,8 @@
 import React from 'react';
 import {ImageBackground, StyleSheet, Text} from 'react-native';
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import Colors from '../utils/Colors';
 
-const Header: React.FC<any> = () => {
-  const [name] = React.useState('Welcome to VetApp');
+const Header: React.FC<any> = ({title}) => {
   return (
     <ImageBackground
       accessibilityRole="image"
@@ -11,7 +10,7 @@ const Header: React.FC<any> = () => {
       source={require('../assets/img/logo.png')}
       style={styles.background}
       imageStyle={styles.logo}>
-      <Text style={styles.text}>{name}</Text>
+      <Text style={styles.text}>{title}</Text>
     </ImageBackground>
   );
 };
@@ -35,7 +34,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: '600',
     textAlign: 'center',
-    color: Colors.black,
+    color: Colors.green,
   },
 });
 export default Header;
