@@ -1,60 +1,59 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
+import {StyleSheet, View, Text, StatusBar} from 'react-native';
 
 import Colors from '../utils/Colors';
 import Header from '../components/Header';
+import ButtonOption from '../components/ButtonOption';
+import Footer from '../components/Footer';
 
 const Home: React.FC<any> = () => {
+  const navigateTo = () => {
+    console.log('Ir a nueva pantalla');
+  };
   return (
     <>
       <StatusBar barStyle="default" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
+      <Header title="Bienvenidos a VetApp" />
+      <View style={styles.container}>
+        <View style={styles.body}>
+          <View style={styles.sectionContainerTitle}>
+            <Text style={styles.title}>Que desea hacer?</Text>
           </View>
-        </ScrollView>
-      </SafeAreaView>
+          <View style={styles.sectionContainer}>
+            <ButtonOption title="Analgesia" onpress={navigateTo} />
+          </View>
+          <View style={styles.sectionContainer}>
+            <ButtonOption title="Sedacion" onpress={navigateTo} />
+          </View>
+          <View style={styles.sectionContainer}>
+            <ButtonOption title="Usar Protocolos" onpress={navigateTo} />
+          </View>
+        </View>
+        <Footer />
+      </View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
+  container: {
+    flex: 1,
+    backgroundColor: Colors.primary,
   },
   body: {
-    backgroundColor: Colors.green,
+    flex: 1,
+  },
+  sectionContainerTitle: {
+    marginTop: 5,
+    padding: 10,
+  },
+  title: {
+    fontSize: 22,
+    color: Colors.lighter,
+    textAlign: 'center',
   },
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.lighter,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.light,
+    marginTop: 20,
   },
 });
 
