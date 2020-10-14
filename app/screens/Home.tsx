@@ -1,12 +1,13 @@
 import React from 'react';
-import {StyleSheet, View, Text, StatusBar} from 'react-native';
+import { StyleSheet, View, Text, StatusBar } from 'react-native';
 
 import Colors from '../utils/Colors';
 import Header from '../components/Header';
 import ButtonOption from '../components/ButtonOption';
 import Footer from '../components/Footer';
+import { HomeScreenProps } from '../types/props/HomeScreenPropsTypes';
 
-const Home: React.FC<any> = () => {
+const Home: React.FC<HomeScreenProps> = ({ route, navigation }) => {
   const navigateTo = () => {
     console.log('Ir a nueva pantalla');
   };
