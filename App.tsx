@@ -1,9 +1,8 @@
 import React from 'react';
-
-import Home from './app/screens/Home';
+import Router from './app/routes/Router';
 
 const App: () => React.ReactNode = () => {
-  return <Home />;
+  return <Router />;
 };
 
 export default App;
