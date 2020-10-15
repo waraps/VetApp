@@ -1,8 +1,8 @@
 import React from 'react';
-import {ImageBackground, StyleSheet, Text} from 'react-native';
+import { ImageBackground, StyleSheet, Text } from 'react-native';
 import Colors from '../utils/Colors';
 
-const Header: React.FC<any> = ({title}) => {
+const Header: React.FC<any> = ({ title }) => {
   return (
     <ImageBackground
       accessibilityRole="image"

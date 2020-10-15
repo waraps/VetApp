@@ -1,5 +1,4 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootStackParamList } from '../types/props/MainStackNavigatorTypes';
@@ -22,5 +21,3 @@ const Router: React.FC = () => {
 };
 
 export default Router;
-
-const styles = StyleSheet.create({});

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import Colors from '../utils/Colors';
 
 const Footer: React.FC<any> = () => {
@@ -16,7 +16,7 @@ const Footer: React.FC<any> = () => {
 export default Footer;
 
 const styles = StyleSheet.create({
-  container: {padding: 5},
+  container: { padding: 5 },
   text: {
     fontSize: 12,
     textAlign: 'center',
