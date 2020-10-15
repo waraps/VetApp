@@ -9,7 +9,7 @@ import { HomeScreenProps } from '../types/props/HomeScreenPropsTypes';
 
 const Home: React.FC<HomeScreenProps> = ({ route, navigation }) => {
   const navigateTo = () => {
-    console.log('Ir a nueva pantalla');
+    navigation.push('PetInfo');
   };
   return (
     <>
@@ -21,13 +21,19 @@ const Home: React.FC<HomeScreenProps> = ({ route, navigation }) => {
             <Text style={styles.title}>Que desea hacer?</Text>
           </View>
           <View style={styles.sectionContainer}>
-            <ButtonOption title="Analgesia" onpress={navigateTo} />
+            <ButtonOption title="Analgesicos" onpress={navigateTo} />
           </View>
           <View style={styles.sectionContainer}>
-            <ButtonOption title="Sedacion" onpress={navigateTo} />
+            <ButtonOption title="Anestesicos" onpress={navigateTo} />
+          </View>
+          <View style={styles.sectionContainer}>
+            <ButtonOption title="Sedantes" onpress={navigateTo} />
           </View>
           <View style={styles.sectionContainer}>
             <ButtonOption title="Usar Protocolos" onpress={navigateTo} />
+          </View>
+          <View style={styles.sectionContainer}>
+            <ButtonOption title="Antagonistas" onpress={navigateTo} />
           </View>
         </View>
         <Footer />
