@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 
 import Colors from '../utils/Colors';
 
-const ButtonOption: React.FC<any> = ({title, onpress}) => {
+const ButtonOption: React.FC<any> = ({ title, onpress }) => {
   return (
     <TouchableOpacity onPress={onpress} style={styles.container}>
       <Text style={styles.text}>{title}</Text>
@@ -18,8 +18,8 @@ const styles = StyleSheet.create({
     width: '50%',
     paddingVertical: 16,
     backgroundColor: Colors.lighter,
-    borderTopEndRadius: 5,
-    borderBottomEndRadius: 40,
+    borderTopEndRadius: 20,
+    borderBottomEndRadius: 20,
     elevation: 9,
   },
   text: {
