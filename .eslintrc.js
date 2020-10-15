@@ -18,6 +18,7 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'react/prop-types': 0,
     'react-native/no-unused-styles': 2,
     'react-native/split-platform-components': 2,
     'react-native/no-inline-styles': 2,
@@ -27,7 +28,7 @@ module.exports = {
     'prettier/prettier': 'error',
     'react/jsx-filename-extension': [
       2,
-      {extensions: ['.js', '.jsx', '.ts', '.tsx']},
+      { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
     ],
     'no-use-before-define': ['off'],
     'react/jsx-closing-bracket-location': [1, 'after-props'],
