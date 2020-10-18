@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 import React from 'react';
 import {
   StyleSheet,
@@ -11,10 +12,11 @@ import Colors from '../utils/Colors';
 import ButtonOption from '../components/ButtonOption';
 import Footer from '../components/Footer';
 import { HomeScreenProps } from '../types/props/HomeScreenPropsTypes';
+import { MedicineJSON } from '../types/medicines/medicineType';
 
-const Home: React.FC<HomeScreenProps> = ({ route, navigation }) => {
-  const navigateTo = () => {
-    navigation.push('MedicationList');
+const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
+  const navigateTo = (medicationList: MedicineJSON) => {
+    navigation.push('MedicationList', { medicationList });
   };
   return (
     <View style={styles.container}>
@@ -28,29 +30,34 @@ const Home: React.FC<HomeScreenProps> = ({ route, navigation }) => {
               imagePath={require('../assets/img/dog.png')}
               title="Analsegicos"
               description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
+              medicineType="analgesics"
               onpress={navigateTo}
             />
             <ButtonOption
               imagePath={require('../assets/img/dog.png')}
               title="Anestesicos"
+              medicineType="anesthetics"
               description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
               onpress={navigateTo}
             />
             <ButtonOption
               imagePath={require('../assets/img/dog.png')}
               title="Sedantes"
+              medicineType="sedatives"
               description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
               onpress={navigateTo}
             />
             <ButtonOption
               imagePath={require('../assets/img/dog.png')}
               title="Antagonistas"
+              medicineType="antagonists"
               description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
               onpress={navigateTo}
             />
             <ButtonOption
               imagePath={require('../assets/img/dog.png')}
               title="Protocolos"
+              medicineType="protocols"
               description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
               onpress={navigateTo}
             />
