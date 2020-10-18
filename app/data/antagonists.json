@@ -1,0 +1,47 @@
+[
+  {
+    "name": "atipamizol",
+    "dog": {
+      "minimumDose": 0.2,
+      "maximumDose": 0.4
+    },
+    "cat": {
+      "minimumDose": 0.2,
+      "maximumDose": 0.4
+    },
+    "concentration": {
+      "mg": 5,
+      "ml": 1
+    }
+  },
+  {
+    "name": "naloxona",
+    "dog": {
+      "minimumDose": 0.01,
+      "maximumDose": 0.04
+    },
+    "cat": {
+      "minimumDose": 0.01,
+      "maximumDose": 0.04
+    },
+    "concentration": {
+      "mg": 0.4,
+      "ml": 1
+    }
+  },
+  {
+    "name": "yohimbina",
+    "dog": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.2
+    },
+    "cat": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.2
+    },
+    "concentration": {
+      "mg": 0.2,
+      "ml": 1
+    }
+  }
+]

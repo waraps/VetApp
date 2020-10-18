@@ -1,0 +1,137 @@
+[
+  {
+    "name": "acepromacina",
+    "dog": {
+      "minimumDose": 0.02,
+      "maximumDose": 0.2
+    },
+    "cat": {
+      "minimumDose": 0.02,
+      "maximumDose": 0.2
+    },
+    "concentration": {
+      "mg": 10,
+      "ml": 1
+    }
+  },
+  {
+    "name": "atropina",
+    "dog": {
+      "minimumDose": 0.02,
+      "maximumDose": 0.04
+    },
+    "cat": {
+      "minimumDose": 0.02,
+      "maximumDose": 0.04
+    },
+    "concentration": {
+      "mg": 1,
+      "ml": 1
+    }
+  },
+  {
+    "name": "bupivacaina",
+    "dog": {
+      "minimumDose": 0.5,
+      "maximumDose": 1
+    },
+    "cat": {
+      "minimumDose": 0.5,
+      "maximumDose": 1
+    },
+    "concentration": {
+      "mg": 0.5,
+      "ml": 1
+    }
+  },
+  {
+    "name": "diazepam",
+    "dog": {
+      "minimumDose": 0.3,
+      "maximumDose": 0.5
+    },
+    "cat": {
+      "minimumDose": 0.3,
+      "maximumDose": 0.5
+    },
+    "concentration": {
+      "mg": 10,
+      "ml": 2
+    }
+  },
+  {
+    "name": "lidocaina",
+    "dog": {
+      "minimumDose": 0.5,
+      "maximumDose": 0.5
+    },
+    "cat": {
+      "minimumDose": 2.5,
+      "maximumDose": 2.5
+    },
+    "concentration": {
+      "mg": 20,
+      "ml": 1
+    }
+  },
+  {
+    "name": "midazolam",
+    "dog": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.25
+    },
+    "cat": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.25
+    },
+    "concentration": {
+      "mg": 15,
+      "ml": 3
+    }
+  },
+  {
+    "name": "pentovarvitalSodico",
+    "dog": {
+      "minimumDose": 10,
+      "maximumDose": 30
+    },
+    "cat": {
+      "minimumDose": 10,
+      "maximumDose": 30
+    },
+    "concentration": {
+      "mg": 64.8,
+      "ml": 1
+    }
+  },
+  {
+    "name": "propofol",
+    "dog": {
+      "minimumDose": 2,
+      "maximumDose": 5
+    },
+    "cat": {
+      "minimumDose": 2,
+      "maximumDose": 5
+    },
+    "concentration": {
+      "mg": 10,
+      "ml": 1
+    }
+  },
+  {
+    "name": "tiopentalSodico",
+    "dog": {
+      "minimumDose": 10,
+      "maximumDose": 25
+    },
+    "cat": {
+      "minimumDose": 5,
+      "maximumDose": 10
+    },
+    "concentration": {
+      "mg": 1000,
+      "ml": 50
+    }
+  }
+]

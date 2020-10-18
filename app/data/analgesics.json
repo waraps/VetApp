@@ -1,0 +1,222 @@
+[
+  {
+    "name": "alfentanilo",
+    "dog": {
+      "minimumDose": 30,
+      "maximumDose": 50
+    },
+    "cat": {
+      "minimumDose": 30,
+      "maximumDose": 50
+    },
+    "concentration": {
+      "mg": 0.5,
+      "ml": 1
+    }
+  },
+  {
+    "name": "butorfanol",
+    "dog": {
+      "minimumDose": 0.2,
+      "maximumDose": 0.8
+    },
+    "cat": {
+      "minimumDose": 0.2,
+      "maximumDose": 0.2
+    },
+    "concentration": {
+      "mg": 1,
+      "ml": 1
+    }
+  },
+  {
+    "name": "carprofeno",
+    "dog": {
+      "minimumDose": 2.2,
+      "maximumDose": 4.4
+    },
+    "cat": {
+      "minimumDose": 2.2,
+      "maximumDose": 4.4
+    },
+    "concentration": {
+      "mg": 50,
+      "ml": 1,
+      "oral": 1
+    }
+  },
+  {
+    "name": "etodolaco",
+    "dog": {
+      "minimumDose": 10,
+      "maximumDose": 15
+    },
+    "cat": null,
+    "concentration": {
+      "oral": 1
+    }
+  },
+  {
+    "name": "fentanilo",
+    "dog": {
+      "minimumDose": 0.002,
+      "maximumDose": 0.006
+    },
+    "cat": {
+      "minimumDose": 0.001,
+      "maximumDose": 0.005
+    },
+    "concentration": {
+      "mg": 0.5,
+      "ml": 10
+    }
+  },
+  {
+    "name": "flunixinMeglumine",
+    "dog": {
+      "minimumDose": 0.25,
+      "maximumDose": 1.1
+    },
+    "cat": {
+      "minimumDose": 0.25,
+      "maximumDose": 0.25
+    },
+    "concentration": {
+      "mg": 50,
+      "ml": 1
+    }
+  },
+  {
+    "name": "ketamina",
+    "dog": {
+      "minimumDose": 5,
+      "maximumDose": 20
+    },
+    "cat": {
+      "minimumDose": 2,
+      "maximumDose": 25
+    },
+    "concentration": {
+      "mg": 50,
+      "ml": 1
+    }
+  },
+  {
+    "name": "ketoprofeno",
+    "dog": {
+      "minimumDose": 0.5,
+      "maximumDose": 1
+    },
+    "cat": {
+      "minimumDose": 0.5,
+      "maximumDose": 1
+    },
+    "concentration": {
+      "mg": 100,
+      "ml": 2
+    }
+  },
+  {
+    "name": "medetomidina",
+    "dog": {
+      "minimumDose": 5,
+      "maximumDose": 15
+    },
+    "cat": {
+      "minimumDose": 10,
+      "maximumDose": 20
+    },
+    "concentration": {
+      "mg": 1,
+      "ml": 1
+    }
+  },
+  {
+    "name": "meloxican",
+    "dog": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.1
+    },
+    "cat": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.1
+    },
+    "concentration": {
+      "mg": 15,
+      "ml": 1,
+      "oral": 1
+    }
+  },
+  {
+    "name": "meperidina",
+    "dog": {
+      "minimumDose": 2,
+      "maximumDose": 10
+    },
+    "cat": {
+      "minimumDose": 2,
+      "maximumDose": 10
+    },
+    "concentration": {
+      "mg": 100,
+      "ml": 1
+    }
+  },
+  {
+    "name": "morfina",
+    "dog": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.6
+    },
+    "cat": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.1
+    },
+    "concentration": {
+      "mg": 10,
+      "ml": 1
+    }
+  },
+  {
+    "name": "remifentanilo",
+    "dog": {
+      "minimumDose": 0.01,
+      "maximumDose": 0.025
+    },
+    "cat": null,
+    "concentration": {
+      "mg": 1,
+      "ml": 1
+    }
+  },
+  {
+    "name": "tramadol",
+    "dog": {
+      "minimumDose": 1,
+      "maximumDose": 2
+    },
+    "cat": {
+      "minimumDose": 1,
+      "maximumDose": 2
+    },
+    "concentration": {
+      "mg": 50,
+      "ml": 1
+    }
+  },
+  {
+    "name": "xilacina",
+    "dog": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.5
+    },
+    "cat": {
+      "minimumDose": 0.1,
+      "maximumDose": 0.5
+    },
+    "concentration": {
+      "mg": 20,
+      "ml": 1
+    }
+  }
+]
