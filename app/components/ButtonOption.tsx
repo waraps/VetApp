@@ -1,14 +1,48 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View, Image, Text } from 'react-native';
 
+// Types
+import { ButtonOptionProps } from '../types/props/ButtonOptionTypes';
+// Data
+import analgesics from '../data/analgesics.json';
+import anesthetics from '../data/anesthetics.json';
+import antagonists from '../data/antagonists.json';
+import sedatives from '../data/sedatives.json';
+// Utils
 import Colors from '../utils/Colors';
+import mapMedicines from '../utils/helpers';
 
-const ButtonOption: React.FC<any> = ({
+const ButtonOption: React.FC<ButtonOptionProps> = ({
   imagePath,
   title,
   description,
+  medicineType,
   onpress,
 }) => {
+  const navigate = (pet: string) => {
+    // eslint-disable-next-line default-case
+    switch (medicineType) {
+      case 'analgesics':
+        onpress(mapMedicines(pet, analgesics));
+        break;
+
+      case 'anesthetics':
+        onpress(mapMedicines(pet, anesthetics));
+        break;
+
+      case 'sedatives':
+        onpress(mapMedicines(pet, sedatives));
+        break;
+
+      case 'antagonists':
+        onpress(mapMedicines(pet, antagonists));
+        break;
+
+      case 'protocols':
+        onpress(mapMedicines(pet, analgesics));
+        break;
+    }
+  };
   return (
     <View style={styles.container}>
       <View style={styles.description}>
@@ -19,7 +53,9 @@ const ButtonOption: React.FC<any> = ({
         </View>
       </View>
       <View style={styles.buttonsGroup}>
-        <TouchableOpacity onPress={onpress} style={styles.buttonPetOutline}>
+        <TouchableOpacity
+          onPress={() => navigate('felino')}
+          style={styles.buttonPetOutline}>
           <Text
             style={
               (styles.buttonText, { color: Colors.primary, fontWeight: 'bold' })
@@ -27,7 +63,9 @@ const ButtonOption: React.FC<any> = ({
             Felino
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity onPress={onpress} style={styles.buttonPet}>
+        <TouchableOpacity
+          onPress={() => navigate('canino')}
+          style={styles.buttonPet}>
           <Text style={styles.buttonText}>Canino</Text>
         </TouchableOpacity>
       </View>
