@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Colors from '../utils/Colors';
 
-const Footer: React.FC<any> = () => {
+const Footer: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Herramienta de uso veterinario.</Text>
