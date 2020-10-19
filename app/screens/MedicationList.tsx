@@ -2,7 +2,7 @@ import React from 'react';
 import { ListRenderItem, StyleSheet, Text, View } from 'react-native';
 import { FlatList } from 'react-native-gesture-handler';
 import { MedicationListScreenProps } from '../types/props/MedicationListScreemPropsTypes';
-import { Medicine } from '../types/props/medicine/MedicineType';
+import { Medicine } from '../types/medicine/MedicineType';
 
 const MedicationList: React.FC<MedicationListScreenProps> = ({ route }) => {
   const medicationList = route.params;

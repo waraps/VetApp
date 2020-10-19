@@ -4,10 +4,7 @@ import { StyleSheet, TouchableOpacity, View, Image, Text } from 'react-native';
 // Types
 import { ButtonOptionProps } from '../types/props/ButtonOptionTypes';
 // Data
-import analgesics from '../data/analgesics.json';
-import anesthetics from '../data/anesthetics.json';
-import antagonists from '../data/antagonists.json';
-import sedatives from '../data/sedatives.json';
+import { analgesics, anesthetics, antagonists, sedatives } from '../data';
 // Utils
 import Colors from '../utils/Colors';
 import mapMedicines from '../utils/helpers';
@@ -17,29 +14,29 @@ const ButtonOption: React.FC<ButtonOptionProps> = ({
   title,
   description,
   medicineType,
-  onpress,
+  onPress,
 }) => {
   const navigate = (pet: string) => {
     // eslint-disable-next-line default-case
     switch (medicineType) {
       case 'analgesics':
-        onpress(mapMedicines(pet, analgesics));
+        onPress(mapMedicines(pet, analgesics));
         break;
 
       case 'anesthetics':
-        onpress(mapMedicines(pet, anesthetics));
+        onPress(mapMedicines(pet, anesthetics));
         break;
 
       case 'sedatives':
-        onpress(mapMedicines(pet, sedatives));
+        onPress(mapMedicines(pet, sedatives));
         break;
 
       case 'antagonists':
-        onpress(mapMedicines(pet, antagonists));
+        onPress(mapMedicines(pet, antagonists));
         break;
 
       case 'protocols':
-        onpress(mapMedicines(pet, analgesics));
+        // onPress(mapMedicines(pet, prot));
         break;
     }
   };
