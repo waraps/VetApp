@@ -12,12 +12,70 @@ import Colors from '../utils/Colors';
 import ButtonOption from '../components/ButtonOption';
 import Footer from '../components/Footer';
 import { HomeScreenProps } from '../types/props/HomeScreenPropsTypes';
-import { MedicineJSON } from '../types/medicines/medicineType';
+import { Medicine } from '../types/medicine/MedicineType';
+
+const MedicineCardList = [
+  {
+    imagePath: require('../assets/img/dog.png'),
+    title: 'Analsegicos',
+    medicineType: 'analgesics',
+    descriptios:
+      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+  },
+  {
+    imagePath: require('../assets/img/dog.png'),
+    title: 'Anestesicos',
+    medicineType: 'anesthetics',
+    descriptios:
+      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+  },
+  {
+    imagePath: require('../assets/img/dog.png'),
+    title: 'Sedantes',
+    medicineType: 'sedatives',
+    descriptios:
+      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+  },
+  {
+    imagePath: require('../assets/img/dog.png'),
+    title: 'Antagonistas',
+    medicineType: 'antagonists',
+    descriptios:
+      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+  },
+  {
+    imagePath: require('../assets/img/dog.png'),
+    title: 'Protocolos',
+    medicineType: 'protocols',
+    descriptios:
+      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+  },
+];
 
 const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
-  const navigateTo = (medicationList: MedicineJSON) => {
-    navigation.push('MedicationList', { medicationList });
+  const navigateTo = (medicationList: Array<Medicine>): void => {
+    navigation.push('MedicationList', medicationList);
   };
+
+  const MedicineCards: React.FC = () => {
+    return (
+      <>
+        {MedicineCardList.map((med, index) => {
+          return (
+            <ButtonOption
+              key={index.toString()}
+              imagePath={med.imagePath}
+              title={med.title}
+              medicineType={med.medicineType}
+              description={med.descriptios}
+              onPress={navigateTo}
+            />
+          );
+        })}
+      </>
+    );
+  };
+
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={Colors.primary} />
@@ -26,41 +84,7 @@ const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            <ButtonOption
-              imagePath={require('../assets/img/dog.png')}
-              title="Analsegicos"
-              description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
-              medicineType="analgesics"
-              onpress={navigateTo}
-            />
-            <ButtonOption
-              imagePath={require('../assets/img/dog.png')}
-              title="Anestesicos"
-              medicineType="anesthetics"
-              description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
-              onpress={navigateTo}
-            />
-            <ButtonOption
-              imagePath={require('../assets/img/dog.png')}
-              title="Sedantes"
-              medicineType="sedatives"
-              description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
-              onpress={navigateTo}
-            />
-            <ButtonOption
-              imagePath={require('../assets/img/dog.png')}
-              title="Antagonistas"
-              medicineType="antagonists"
-              description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
-              onpress={navigateTo}
-            />
-            <ButtonOption
-              imagePath={require('../assets/img/dog.png')}
-              title="Protocolos"
-              medicineType="protocols"
-              description="Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla"
-              onpress={navigateTo}
-            />
+            <MedicineCards />
           </View>
           <Footer />
         </ScrollView>

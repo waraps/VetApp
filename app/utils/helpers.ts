@@ -1,4 +1,4 @@
-import { MedicineJSON, Medicine } from '../types/medicines/medicineType';
+import { MedicineJSON, Medicine } from '../types/medicine/MedicineType';
 
 const mapMedicines = (
   petType: string,

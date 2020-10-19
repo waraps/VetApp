@@ -3,8 +3,10 @@ import { Easing } from 'react-native';
 import {
   createStackNavigator,
   CardStyleInterpolators,
+  StackNavigationOptions,
 } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
+import { TransitionSpec } from '@react-navigation/stack/lib/typescript/src/types';
 import { RootStackParamList } from '../types/props/MainStackNavigatorTypes';
 
 // Screens
@@ -16,7 +18,7 @@ import Colors from '../utils/Colors';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
-const config = {
+const config: TransitionSpec = {
   animation: 'spring',
   config: {
     stiffness: 1000,
@@ -28,7 +30,7 @@ const config = {
   },
 };
 
-const configClose = {
+const configClose: TransitionSpec = {
   animation: 'timing',
   config: {
     duration: 400,
@@ -37,19 +39,20 @@ const configClose = {
 };
 
 const Router: React.FC = () => {
+  const screenOptions: StackNavigationOptions = {
+    gestureEnabled: true,
+    gestureDirection: 'horizontal',
+    cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+    transitionSpec: {
+      open: config,
+      close: configClose,
+    },
+  };
   return (
     <NavigationContainer>
       <RootStack.Navigator
         initialRouteName="Home"
-        screenOptions={{
-          gestureEnabled: true,
-          gestureDirection: 'horizontal',
-          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
-          transitionSpec: {
-            open: config,
-            close: configClose,
-          },
-        }}
+        screenOptions={screenOptions}
         animation="fade">
         <RootStack.Screen
           name="Home"
