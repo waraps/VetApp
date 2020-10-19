@@ -1,9 +1,10 @@
-import { GestureResponderEvent, ImageSourcePropType } from 'react-native';
+import { ImageSourcePropType } from 'react-native';
+import { Medicine } from '../medicine/MedicineType';
 
 export type ButtonOptionProps = {
   title: string;
   description: string;
   medicineType: string;
-  onpress: (event: GestureResponderEvent) => void;
+  onPress: (params: Array<Medicine>) => void;
   imagePath: ImageSourcePropType;
 };

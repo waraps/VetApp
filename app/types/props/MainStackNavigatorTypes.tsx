@@ -1,7 +1,6 @@
-import { MedicineJSON } from '../medicines/medicineType';
+import { Medicine, MedicineJSON } from '../medicine/MedicineType';
 
 export type RootStackParamList = {
   Home: MedicineJSON;
-  PetInfo: undefined;
-  MedicationList: undefined;
+  MedicationList: Array<Medicine>;
 };

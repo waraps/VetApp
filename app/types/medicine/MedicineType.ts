@@ -1,27 +1,23 @@
-type dog = {
-  minimumDose: number;
-  maximumDose: number;
-};
-
-type cat = {
+type dose = {
   minimumDose: number;
   maximumDose: number;
 };
 
 type concentration = {
-  mg: number;
-  ml: number;
+  mg?: number;
+  ml?: number;
+  oral?: number;
 };
 
 export type MedicineJSON = {
   name: string;
-  dog: dog;
-  cat: cat;
+  dog: dose | null;
+  cat: dose | null;
   concentration: concentration;
 };
 
 export type Medicine = {
   name: string;
-  pet: dog | cat;
+  pet: dose | null;
   concentration: concentration;
 };
