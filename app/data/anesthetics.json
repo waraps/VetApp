@@ -90,7 +90,7 @@
     }
   },
   {
-    "name": "pentovarvitalSodico",
+    "name": "pentovarvital Sodico",
     "dog": {
       "minimumDose": 10,
       "maximumDose": 30
@@ -120,7 +120,7 @@
     }
   },
   {
-    "name": "tiopentalSodico",
+    "name": "tiopental Sodico",
     "dog": {
       "minimumDose": 10,
       "maximumDose": 25
