@@ -20,19 +20,19 @@ const ButtonOption: React.FC<ButtonOptionProps> = ({
     // eslint-disable-next-line default-case
     switch (medicineType) {
       case 'analgesics':
-        onPress(mapMedicines(pet, analgesics));
+        onPress(mapMedicines(pet, analgesics), 'Analgésico');
         break;
 
       case 'anesthetics':
-        onPress(mapMedicines(pet, anesthetics));
+        onPress(mapMedicines(pet, anesthetics), 'Anestésicos');
         break;
 
       case 'sedatives':
-        onPress(mapMedicines(pet, sedatives));
+        onPress(mapMedicines(pet, sedatives), 'Sedativos');
         break;
 
       case 'antagonists':
-        onPress(mapMedicines(pet, antagonists));
+        onPress(mapMedicines(pet, antagonists), 'Agonista');
         break;
 
       case 'protocols':

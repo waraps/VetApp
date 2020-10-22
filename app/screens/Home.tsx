@@ -53,8 +53,14 @@ const MedicineCardList = [
 ];
 
 const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
-  const navigateTo = (medicationList: Array<Medicine>): void => {
-    navigation.push('MedicationList', medicationList);
+  const navigateTo = (
+    medicationList: Array<Medicine>,
+    screenTitle: string,
+  ): void => {
+    navigation.push('MedicationList', {
+      medicineList: medicationList,
+      screenName: screenTitle,
+    });
   };
 
   const MedicineCards: React.FC = () => {

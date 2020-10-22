@@ -5,6 +5,6 @@ export type ButtonOptionProps = {
   title: string;
   description: string;
   medicineType: string;
-  onPress: (params: Array<Medicine>) => void;
+  onPress: (medicationList: Array<Medicine>, screenTitle: string) => void;
   imagePath: ImageSourcePropType;
 };
