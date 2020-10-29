@@ -1,6 +1,7 @@
 [
   {
     "name": "acepromacina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.02,
       "maximumDose": 0.2
@@ -16,6 +17,7 @@
   },
   {
     "name": "atropina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.02,
       "maximumDose": 0.04
@@ -31,6 +33,7 @@
   },
   {
     "name": "bupivacaina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.5,
       "maximumDose": 1
@@ -46,6 +49,7 @@
   },
   {
     "name": "diazepam",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.3,
       "maximumDose": 0.5
@@ -61,6 +65,7 @@
   },
   {
     "name": "lidocaina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.5,
       "maximumDose": 0.5
@@ -76,6 +81,7 @@
   },
   {
     "name": "midazolam",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.25
@@ -91,6 +97,7 @@
   },
   {
     "name": "pentovarvital Sodico",
+    "isSelected": false,
     "dog": {
       "minimumDose": 10,
       "maximumDose": 30
@@ -106,6 +113,7 @@
   },
   {
     "name": "propofol",
+    "isSelected": false,
     "dog": {
       "minimumDose": 2,
       "maximumDose": 5
@@ -121,6 +129,7 @@
   },
   {
     "name": "tiopental Sodico",
+    "isSelected": false,
     "dog": {
       "minimumDose": 10,
       "maximumDose": 25

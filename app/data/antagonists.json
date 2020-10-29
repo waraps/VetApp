@@ -1,6 +1,7 @@
 [
   {
     "name": "atipamizol",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.2,
       "maximumDose": 0.4
@@ -16,6 +17,7 @@
   },
   {
     "name": "naloxona",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.01,
       "maximumDose": 0.04
@@ -31,6 +33,7 @@
   },
   {
     "name": "yohimbina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.2

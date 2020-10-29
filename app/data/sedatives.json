@@ -1,6 +1,7 @@
 [
   {
     "name": "acepromacina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.02,
       "maximumDose": 0.2
@@ -16,6 +17,7 @@
   },
   {
     "name": "butorfanol",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.2,
       "maximumDose": 0.8
@@ -31,6 +33,7 @@
   },
   {
     "name": "diazepam",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.3,
       "maximumDose": 0.5
@@ -46,6 +49,7 @@
   },
   {
     "name": "fentanilo",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.002,
       "maximumDose": 0.006
@@ -61,6 +65,7 @@
   },
   {
     "name": "ketamina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 5,
       "maximumDose": 20
@@ -76,6 +81,7 @@
   },
   {
     "name": "midazolam",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.25
@@ -91,6 +97,7 @@
   },
   {
     "name": "xilacina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.5

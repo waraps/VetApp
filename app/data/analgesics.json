@@ -1,6 +1,7 @@
 [
   {
     "name": "alfentanilo",
+    "isSelected": false,
     "dog": {
       "minimumDose": 30,
       "maximumDose": 50
@@ -16,6 +17,7 @@
   },
   {
     "name": "butorfanol",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.2,
       "maximumDose": 0.8
@@ -31,6 +33,7 @@
   },
   {
     "name": "carprofeno",
+    "isSelected": false,
     "dog": {
       "minimumDose": 2.2,
       "maximumDose": 4.4
@@ -47,6 +50,7 @@
   },
   {
     "name": "etodolaco",
+    "isSelected": false,
     "dog": {
       "minimumDose": 10,
       "maximumDose": 15
@@ -58,6 +62,7 @@
   },
   {
     "name": "fentanilo",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.002,
       "maximumDose": 0.006
@@ -73,6 +78,7 @@
   },
   {
     "name": "flunixin Meglumine",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.25,
       "maximumDose": 1.1
@@ -88,6 +94,7 @@
   },
   {
     "name": "ketamina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 5,
       "maximumDose": 20
@@ -103,6 +110,7 @@
   },
   {
     "name": "ketoprofeno",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.5,
       "maximumDose": 1
@@ -118,6 +126,7 @@
   },
   {
     "name": "medetomidina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 5,
       "maximumDose": 15
@@ -133,6 +142,7 @@
   },
   {
     "name": "meloxican",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.1
@@ -149,6 +159,7 @@
   },
   {
     "name": "meperidina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 2,
       "maximumDose": 10
@@ -164,6 +175,7 @@
   },
   {
     "name": "morfina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.6
@@ -179,6 +191,7 @@
   },
   {
     "name": "remifentanilo",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.01,
       "maximumDose": 0.025
@@ -191,6 +204,7 @@
   },
   {
     "name": "tramadol",
+    "isSelected": false,
     "dog": {
       "minimumDose": 1,
       "maximumDose": 2
@@ -206,6 +220,7 @@
   },
   {
     "name": "xilacina",
+    "isSelected": false,
     "dog": {
       "minimumDose": 0.1,
       "maximumDose": 0.5
