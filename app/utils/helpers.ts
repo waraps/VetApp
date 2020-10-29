@@ -13,6 +13,7 @@ const mapMedicines = (
             name: medicine.name,
             pet: medicine.dog,
             concentration: medicine.concentration,
+            isSelected: medicine.isSelected,
           };
         })
         .filter((medicine) => {
@@ -21,6 +22,7 @@ const mapMedicines = (
               name: medicine.name,
               pet: medicine.pet,
               concentration: medicine.concentration,
+              isSelected: medicine.isSelected,
             };
           }
           return null;
@@ -33,6 +35,7 @@ const mapMedicines = (
             name: medicine.name,
             pet: medicine.cat,
             concentration: medicine.concentration,
+            isSelected: medicine.isSelected,
           };
         })
         .filter((medicine) => {
@@ -41,6 +44,7 @@ const mapMedicines = (
               name: medicine.name,
               pet: medicine.pet,
               concentration: medicine.concentration,
+              isSelected: medicine.isSelected,
             };
           }
           return null;
