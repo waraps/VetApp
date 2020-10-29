@@ -14,10 +14,12 @@ export type MedicineJSON = {
   dog: dose | null;
   cat: dose | null;
   concentration: concentration;
+  isSelected: boolean;
 };
 
 export type Medicine = {
   name: string;
   pet: dose | null;
   concentration: concentration;
+  isSelected: boolean;
 };
