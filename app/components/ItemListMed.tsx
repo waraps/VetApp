@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Icon from 'react-native-vector-icons/AntDesign';
 import {
   ListRenderItem,
   StyleSheet,
@@ -40,6 +41,7 @@ const ItemListMed: ListRenderItem<Medicine> = ({ item }) => {
           </View>
         </View>
       </View>
+      {item.isSelected && <Icon name="checkcircleo" style={styles.iconStyle} />}
     </TouchableOpacity>
   );
 };
@@ -100,6 +102,10 @@ const styles = StyleSheet.create({
     textTransform: 'capitalize',
     width: '80%',
     color: Colors.dark,
+  },
+  iconStyle: {
+    color: Colors.primary,
+    fontSize: 20,
   },
 });
 
