@@ -55,7 +55,8 @@ const ButtonOption: React.FC<ButtonOptionProps> = ({
           style={styles.buttonPetOutline}>
           <Text
             style={
-              (styles.buttonText, { color: Colors.primary, fontWeight: 'bold' })
+              (styles.buttonText,
+              { color: Colors.primaryLight, fontWeight: 'bold' })
             }>
             Felino
           </Text>
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   buttonPet: {
-    backgroundColor: Colors.primary,
+    backgroundColor: Colors.primaryLight,
     paddingHorizontal: 60,
     paddingVertical: 10,
     borderRadius: 3,
@@ -121,7 +122,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 3,
     borderWidth: 1,
-    borderColor: Colors.primary,
+    borderColor: Colors.primaryLight,
   },
   buttonText: {
     textAlign: 'center',
