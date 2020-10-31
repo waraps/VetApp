@@ -32,7 +32,6 @@ const MedicationList: React.FC<MedicationListScreenProps> = ({
 
   const addMedicine = (newMedicine: Medicine): void => {
     let list: IMedicineSelected = medicinesSelected;
-    console.log(newMedicine);
     const index = list.indexOf(newMedicine);
     if (index > -1) {
       list.splice(index, 1);
