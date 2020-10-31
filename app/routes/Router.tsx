@@ -12,6 +12,7 @@ import { RootStackParamList } from '../types/props/MainStackNavigatorTypes';
 // Screens
 import Home from '../screens/Home';
 import MedicationList from '../screens/MedicationList';
+import Results from '../screens/Results';
 
 // Utils
 import Colors from '../utils/Colors';
@@ -70,6 +71,18 @@ const Router: React.FC = () => {
           component={MedicationList}
           options={{
             title: 'Farmacos',
+            headerStyle: { backgroundColor: Colors.primary },
+            headerTintColor: Colors.lighter,
+            animationEnabled: true,
+            headerStatusBarHeight: 10,
+            headerTitleAlign: 'center',
+          }}
+        />
+        <RootStack.Screen
+          name="Results"
+          component={Results}
+          options={{
+            title: 'Resultado',
             headerStyle: { backgroundColor: Colors.primary },
             headerTintColor: Colors.lighter,
             animationEnabled: true,

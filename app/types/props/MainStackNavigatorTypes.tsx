@@ -8,4 +8,5 @@ type MedicationListParams = {
 export type RootStackParamList = {
   Home: MedicineJSON;
   MedicationList: MedicationListParams;
+  Results: any;
 };
