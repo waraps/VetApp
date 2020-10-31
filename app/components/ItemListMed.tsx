@@ -10,13 +10,14 @@ import {
 import { Medicine } from '../types/medicine/MedicineType';
 import Colors from '../utils/Colors';
 
-const ItemListMed: ListRenderItem<Medicine> = ({ item }) => {
+const ItemListMed: ListRenderItem<Medicine> = ({ item, addMedicine }) => {
   const [updateSelection, setUpdateSelection] = useState(false);
 
   const isSelected = (medicine: Medicine) => {
     // eslint-disable-next-line no-param-reassign
     medicine.isSelected = !medicine.isSelected;
     setUpdateSelection(!updateSelection);
+    addMedicine(medicine);
   };
 
   useEffect(() => {}, [updateSelection]);
