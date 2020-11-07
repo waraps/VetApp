@@ -7,7 +7,7 @@ import { ButtonOptionProps } from '../types/props/ButtonOptionTypes';
 import { analgesics, anesthetics, antagonists, sedatives } from '../data';
 // Utils
 import Colors from '../utils/Colors';
-import mapMedicines from '../utils/helpers';
+import { mapMedicines } from '../utils/helpers';
 
 const ButtonOption: React.FC<ButtonOptionProps> = ({
   imagePath,
