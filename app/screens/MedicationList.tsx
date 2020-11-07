@@ -6,7 +6,6 @@ import {
   Text,
   View,
   StyleSheet,
-  Alert,
 } from 'react-native';
 import { MedicationListScreenProps } from '../types/props/MedicationListScreemPropsTypes';
 import { Medicine } from '../types/medicine/MedicineType';
