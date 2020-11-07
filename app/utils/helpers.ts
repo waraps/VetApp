@@ -57,4 +57,24 @@ const mapMedicines = (
   return mapMedicineList;
 };
 
-export default mapMedicines;
+const calculateOneDose = (medicine: any, weight: number): any => {
+  const { minimumDose, maximumDose } = medicine.pet;
+  const { ml, mg } = medicine.concentration;
+  return ((minimumDose + maximumDose) / 2) * weight * (ml / mg);
+};
+
+const calculateDoses = (
+  weight: number,
+  medicineList: Array<MedicineJSON>,
+): Array<Medicine> => {
+  let medicineListDoses: Array<any> = [];
+  medicineListDoses = medicineList.map((medicine) => {
+    return {
+      name: medicine.name,
+      dose: calculateOneDose(medicine, weight),
+    };
+  });
+  return medicineListDoses;
+};
+
+export { mapMedicines, calculateDoses };
