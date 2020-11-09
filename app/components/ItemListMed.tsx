@@ -32,15 +32,27 @@ const ItemListMed: ListRenderItem<Medicine> = ({ item, addMedicine }) => {
       <View style={styles.itemBody}>
         <Text style={styles.itemTitle}>{item.name}</Text>
         <View style={styles.itemBodyDescription}>
-          <View style={styles.itemTag}>
-            <Text>mg: </Text>
-            <Text>{item.concentration.mg}</Text>
-          </View>
-          <View style={styles.itemTag}>
-            <Text>ml: </Text>
-            <Text>{item.concentration.ml}</Text>
-          </View>
+          {item.concentration.mg && (
+            <View style={styles.itemTag}>
+              <Text style={styles.itemTitleDescription}>Solucion: </Text>
+              <Text>{item.concentration.mg}</Text>
+              <Text> mg</Text>
+            </View>
+          )}
+          {item.concentration.ml && (
+            <View style={styles.itemTag}>
+              <Text>{item.concentration.ml}</Text>
+              <Text> ml</Text>
+            </View>
+          )}
         </View>
+        {item.concentration.oral && (
+          <View style={styles.itemTag}>
+            <Text style={styles.itemTitleDescription}>Oral: </Text>
+            <Text>{item.concentration.oral}</Text>
+            <Text> ml</Text>
+          </View>
+        )}
       </View>
       {item.isSelected && <Icon name="checkcircleo" style={styles.iconStyle} />}
     </TouchableOpacity>
@@ -91,17 +103,22 @@ const styles = StyleSheet.create({
   },
   itemTag: {
     paddingHorizontal: 5,
-    paddingBottom: 12,
+    // paddingBottom: 12,
     flexDirection: 'row',
     fontSize: 20,
     fontWeight: '700',
   },
   itemTitle: {
     paddingHorizontal: 5,
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: '700',
     textTransform: 'capitalize',
     width: '80%',
+    color: Colors.dark,
+  },
+  itemTitleDescription: {
+    fontWeight: '700',
+    textTransform: 'capitalize',
     color: Colors.dark,
   },
   iconStyle: {
