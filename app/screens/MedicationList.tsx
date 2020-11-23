@@ -63,6 +63,7 @@ const MedicationList: React.FC<MedicationListScreenProps> = ({
       <FlatList
         nestedScrollEnabled
         data={medicationList}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
         keyExtractor={keyExtractor}
         renderItem={({ item }) => (
           <ItemListMed item={item} addMedicine={addMedicine} />
@@ -83,7 +84,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.primaryTranslucent,
     borderBottomWidth: 0.5,
     borderBottomColor: Colors.gray,
-    marginBottom: 10,
+    // marginBottom: 10,
   },
   hintText: {
     color: Colors.primary,
@@ -108,6 +109,14 @@ const styles = StyleSheet.create({
     color: Colors.primaryLight,
     fontSize: 18,
     fontWeight: 'bold',
+  },
+  separator: {
+    backgroundColor: Colors.gray,
+    height: 1,
+    width: '85%',
+    position: 'absolute',
+    right: 0,
+    bottom: 0,
   },
 });
 
