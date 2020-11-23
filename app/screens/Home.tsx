@@ -43,13 +43,13 @@ const MedicineCardList = [
     descriptios:
       'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
   },
-  {
-    imagePath: require('../assets/img/dog.png'),
-    title: 'Protocolos',
-    medicineType: 'protocols',
-    descriptios:
-      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
-  },
+  // {
+  //   imagePath: require('../assets/img/dog.png'),
+  //   title: 'Protocolos',
+  //   medicineType: 'protocols',
+  //   descriptios:
+  //     'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+  // },
 ];
 
 const Home: React.FC<HomeScreenProps> = ({ navigation }) => {
