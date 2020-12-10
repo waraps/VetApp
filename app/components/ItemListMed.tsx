@@ -15,7 +15,8 @@ import ModalMedicine from './ModalMedicine';
 const ItemListMed: ListRenderItem<Medicine> = ({ item, addMedicine }) => {
   const [itemMedicine, setItemMedicine] = useState(item);
   const [updateSelection, setUpdateSelection] = useState(false);
-  const [visible, setVisible] = useState(false);
+  const [visibleOralSolution, setVisibleOralSolution] = useState(false);
+  const [visibleOral, setVisibleOral] = useState(false);
   const [opcionMedicine, setOptionMedicine] = useState(0);
 
   const isSelected = (medicine: Medicine) => {
@@ -26,14 +27,14 @@ const ItemListMed: ListRenderItem<Medicine> = ({ item, addMedicine }) => {
     if (itemMedicine.concentration.oral && itemMedicine.concentration.ml) {
       if (itemMedicine.isSelected) {
         setOptionMedicine(1);
-        setVisible(true);
+        setVisibleOralSolution(true);
       }
     }
 
     if (itemMedicine.concentration.oral && !itemMedicine.concentration.ml) {
       if (itemMedicine.isSelected) {
         setOptionMedicine(2);
-        setVisible(true);
+        setVisibleOral(true);
       }
     }
 
@@ -81,10 +82,12 @@ const ItemListMed: ListRenderItem<Medicine> = ({ item, addMedicine }) => {
         {itemMedicine.isSelected && (
           <Icon name="checkcircleo" style={styles.iconStyle} />
         )}
-        {visible && (
+        {(visibleOralSolution || visibleOral) && (
           <ModalMedicine
-            visible={visible}
-            hide={setVisible}
+            visibleOral={visibleOral}
+            visibleOralSolution={visibleOralSolution}
+            hideOral={setVisibleOral}
+            hideOralSolution={setVisibleOralSolution}
             opc={opcionMedicine}
             medicine={itemMedicine}
             setMedicine={setItemMedicine}

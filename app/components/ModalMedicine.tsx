@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Modal,
   StyleSheet,
@@ -11,15 +11,20 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Colors from '../utils/Colors';
 
 const ModalMedicine: React.FC<any> = ({
-  visible,
-  hide,
+  visibleOral,
+  visibleOralSolution,
+  hideOral,
+  hideOralSolution,
   opc,
   medicine,
   setMedicine,
 }) => {
+  const [option, setOption] = useState(opc)
+  const [dose, setDose] = useState(0.0);
+  const [oralJump, setOralJump] = useState(false)
   const SolutionOral = () => (
     <View style={styles.centeredView}>
-      <Modal animationType="fade" transparent visible={visible}>
+      <Modal animationType="fade" transparent visible={visibleOralSolution}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>
@@ -31,18 +36,18 @@ const ModalMedicine: React.FC<any> = ({
                 activeOpacity={0.6}
                 underlayColor={Colors.light}
                 style={styles.openButton}
-                onPress={setModalVisible}>
+                onPress={choosingOral}>
                 <Text style={styles.textStyle}>Oral</Text>
               </TouchableHighlight>
               <TouchableHighlight
                 activeOpacity={0.6}
                 underlayColor={Colors.light}
                 style={styles.openButton}
-                onPress={setModalVisible}>
+                onPress={setOralSolutionModalVisible}>
                 <Text style={styles.textStyle}>Solucion</Text>
               </TouchableHighlight>
             </View>
-            <TouchableHighlight style={styles.closeModal} onPress={closeModal}>
+            <TouchableHighlight style={styles.closeModal} onPress={closeOralSolutionModal}>
               <Text style={styles.textStyleClose}>x</Text>
             </TouchableHighlight>
           </View>
@@ -52,7 +57,7 @@ const ModalMedicine: React.FC<any> = ({
   );
   const Oral = () => (
     <View style={styles.centeredView}>
-      <Modal animationType="fade" transparent visible={visible}>
+      <Modal animationType="fade" transparent visible={visibleOral}>
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={styles.modalText}>
@@ -64,15 +69,17 @@ const ModalMedicine: React.FC<any> = ({
               keyboardType="decimal-pad"
               maxLength={4}
               placeholderTextColor={Colors.primary}
+              value={dose}
+              onChangeText={(text) => setDose(text)}
             />
             <TouchableHighlight
               activeOpacity={0.6}
               underlayColor={Colors.light}
               style={styles.openButton}
-              onPress={setModalVisible}>
+              onPress={setOralModalVisible}>
               <Text style={styles.textStyle}>Ingresar</Text>
             </TouchableHighlight>
-            <TouchableHighlight style={styles.closeModal} onPress={closeModal}>
+            <TouchableHighlight style={styles.closeModal} onPress={closeOralModal}>
               <Icon name="close" style={styles.iconStyle} />
             </TouchableHighlight>
           </View>
@@ -80,16 +87,40 @@ const ModalMedicine: React.FC<any> = ({
       </Modal>
     </View>
   );
-  const setModalVisible = () => {
-    hide(!visible);
-  };
-  const closeModal = () => {
-    hide(!visible);
+  const setOralSolutionModalVisible = () => {
+    hideOralSolution(!visibleOralSolution);
     // eslint-disable-next-line no-param-reassign
     medicine.isSelected = !medicine.isSelected;
+
+    oralJump ? medicine.isSelected : medicine.isSelected = !medicine.isSelected;
+
+    medicine.concentration.mg = medicine.concentration.mgbkup ? medicine.concentration.mgbkup : medicine.concentration.mg;
     setMedicine(medicine);
   };
-  switch (opc) {
+  const closeOralSolutionModal = () => {
+    hideOralSolution(!visibleOralSolution);
+  };
+  const setOralModalVisible = () => {
+    hideOral(!visibleOral);
+    // eslint-disable-next-line no-param-reassign
+    medicine.isSelected = !medicine.isSelected;
+    
+    oralJump ? medicine.isSelected = !medicine.isSelected : medicine.isSelected;
+
+    medicine.concentration.mgbkup = medicine.concentration.mg
+    medicine.concentration.mg = dose;
+    setMedicine(medicine);
+  };
+  const closeOralModal = () => {
+    hideOral(!visibleOral);
+  };
+  const choosingOral = () => {
+    hideOralSolution(!visibleOralSolution);
+    setOption(2);
+    setOralJump(!oralJump)
+    hideOral(!visibleOral);
+  }
+  switch (option) {
     case 1:
       return <SolutionOral />;
 
