@@ -102,13 +102,10 @@ const ModalMedicine: React.FC<any> = ({
   };
   const setOralModalVisible = () => {
     hideOral(!visibleOral);
-    // eslint-disable-next-line no-param-reassign
-    medicine.isSelected = !medicine.isSelected;
-    
-    oralJump ? medicine.isSelected = !medicine.isSelected : medicine.isSelected;
 
     medicine.concentration.mgbkup = medicine.concentration.mg
     medicine.concentration.mg = dose;
+    console.log(medicine);
     setMedicine(medicine);
   };
   const closeOralModal = () => {

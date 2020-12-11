@@ -59,8 +59,11 @@ const mapMedicines = (
 
 const calculateOneDose = (medicine: any, weight: number): any => {
   const { minimumDose, maximumDose } = medicine.pet;
-  const { ml, mg } = medicine.concentration;
-  return ((minimumDose + maximumDose) / 2) * weight * (ml / mg);
+  const { ml, mg, oral } = medicine.concentration;
+  let total = 0;
+  ml ? total = ((minimumDose + maximumDose) / 2) * weight * (ml / mg) : total = ((minimumDose + maximumDose) / 2) * weight * (oral / mg);
+
+  return total;
 };
 
 const calculateDoses = (
