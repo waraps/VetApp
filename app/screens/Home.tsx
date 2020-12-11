@@ -16,35 +16,35 @@ import { Medicine } from '../types/medicine/MedicineType';
 
 const MedicineCardList = [
   {
-    imagePath: require('../assets/img/dog.png'),
+    imagePath: require('../assets/img/analgesics.png'),
     title: 'Analsegicos',
     medicineType: 'analgesics',
     descriptios:
       'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
   },
   {
-    imagePath: require('../assets/img/dog.png'),
+    imagePath: require('../assets/img/anesthetics.png'),
     title: 'Anestesicos',
     medicineType: 'anesthetics',
     descriptios:
       'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
   },
   {
-    imagePath: require('../assets/img/dog.png'),
+    imagePath: require('../assets/img/sedatives.png'),
     title: 'Sedantes',
     medicineType: 'sedatives',
     descriptios:
       'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
   },
   {
-    imagePath: require('../assets/img/dog.png'),
+    imagePath: require('../assets/img/antagonists.png'),
     title: 'Antagonistas',
     medicineType: 'antagonists',
     descriptios:
       'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
   },
   // {
-  //   imagePath: require('../assets/img/dog.png'),
+  //   imagePath: require('../assets/img/protocols.png'),
   //   title: 'Protocolos',
   //   medicineType: 'protocols',
   //   descriptios:
