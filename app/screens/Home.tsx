@@ -20,28 +20,28 @@ const MedicineCardList = [
     title: 'Analsegicos',
     medicineType: 'analgesics',
     descriptios:
-      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+      'Son fármacos usados para lograr la analgesia, el alivio y reducción del dolor, ya sea de cabeza, muscular o en general.​​​',
   },
   {
     imagePath: require('../assets/img/anesthetics.png'),
     title: 'Anestesicos',
     medicineType: 'anesthetics',
     descriptios:
-      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+      'Son fármacos usados para bloquear la sensibilidad táctil y dolorosa, sea en todo o parte de su cuerpo y sea con o sin compromiso de conciencia.',
   },
   {
     imagePath: require('../assets/img/sedatives.png'),
     title: 'Sedantes',
     medicineType: 'sedatives',
     descriptios:
-      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+      'Son fármacos usados para la reducción de la irritabilidad o agitación del paciente.',
   },
   {
     imagePath: require('../assets/img/antagonists.png'),
     title: 'Antagonistas',
     medicineType: 'antagonists',
     descriptios:
-      'Esto solo es una super larga descripcion, para emular el diseño de la aplicacion. bla bla bla bla',
+      'Son fármacos usados para frenar la acción o el efecto de otro fármaco.',
   },
   // {
   //   imagePath: require('../assets/img/protocols.png'),
